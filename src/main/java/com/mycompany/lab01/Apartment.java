@@ -1,13 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.lab01;
-
-/**
- *
- * @author LOCAL
- */
-public class Apartment {
+public class Apartment{
+    private long id;
+    private String address;
+    private double area;
+    private int rooms;
+    private double price;
+    
+    
+    public long getId(){
+        return id;
+    }
+    
+    public String getAddress(){
+        return address;
+    }
+    
+    public double getArea(){
+        return area;
+    }
+    
+    public int getRooms(){
+        return rooms;
+    }
+    
+    public double getPrice(){
+        return price;
+    }
     
 }
