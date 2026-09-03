@@ -1,16 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.lab01;
 
-/**
- *
- * @author LOCAL
- */
 public class Lab01FirstClass {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        Apartment ap = new Apartment();
+
+        ap.setId(1);
+        ap.setAddress("ул. Ленина, д. 1");
+        ap.setArea(65.5);
+        ap.setRooms(2);
+        ap.setPrice(8500000);
+
+        System.out.println(ap.getDescription());
     }
 }

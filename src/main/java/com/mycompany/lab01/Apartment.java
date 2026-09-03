@@ -1,6 +1,8 @@
+package com.mycompany.lab01;
+
 public class Apartment{
     private long id;
-    private String adress;
+    private String address;
     private double area;
     private int rooms;
     private double price;
@@ -11,7 +13,7 @@ public class Apartment{
     }
     
     public String getAddress(){
-        return adress;
+        return address;
     }
     
     public double getArea(){
@@ -25,11 +27,11 @@ public class Apartment{
     public double getPrice(){
         return price;
     }
-    public void setAdress(String adress){
-        if (adress == null || adress.isEmpty()){
+    public void setAddress(String address){
+        if (address == null || address.isEmpty()){
             throw new IllegalArgumentException("Адрес не может быть пустым"); 
         }
-        this.adress =adress;
+        this.address =address;
     }
     public void setArea(double area){
         if (area <= 0){
@@ -55,6 +57,9 @@ public class Apartment{
         throw new IllegalArgumentException("ID должен быть больше 0");
     }
     this.id = id;
-}
+    }
     
+    public String getDescription() {
+        return "Квартира по адресу " + address + ": " + area + " м², " + rooms + " комн., цена " + price + " руб.";
+} 
 }
