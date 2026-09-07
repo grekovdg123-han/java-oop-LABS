@@ -11,6 +11,7 @@ public class Lab01FirstClass {
         ap.setArea(65.5);
         ap.setRooms(2);
         ap.setPrice(8500000);
+        ap.setStatus(ApartmentStatus.FREE);
 
         System.out.println(ap.getDescription());
     }

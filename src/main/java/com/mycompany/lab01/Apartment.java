@@ -6,7 +6,22 @@ public class Apartment{
     private double area;
     private int rooms;
     private double price;
+    private ApartmentStatus status;
     
+    
+    public String getStatusMessage() {
+        switch (status) {
+            case FREE:
+                return "Свободна — доступна для покупки";
+            case SOLD:
+                return "Продана — недоступна";
+            case RENTED:
+                return "Сдана в аренду";
+            default:
+                return "Статус неизвестен";
+        }
+}
+ 
     
     public long getId(){
         return id;
@@ -27,6 +42,11 @@ public class Apartment{
     public double getPrice(){
         return price;
     }
+    
+    public void setStatus(ApartmentStatus status) {
+        this.status = status;
+    }
+        
     public void setAddress(String address){
         if (address == null || address.isEmpty()){
             throw new IllegalArgumentException("Адрес не может быть пустым"); 
@@ -60,6 +80,9 @@ public class Apartment{
     }
     
     public String getDescription() {
-        return "Квартира по адресу " + address + ": " + area + " м², " + rooms + " комн., цена " + price + " руб.";
-} 
+        return "Квартира по адресу " + address + ": " + 
+            area + " м², " + rooms + " комн., " + 
+            getStatusMessage() +  // ← используем метод!
+            ", цена " + price + " руб.";
+}
 }
